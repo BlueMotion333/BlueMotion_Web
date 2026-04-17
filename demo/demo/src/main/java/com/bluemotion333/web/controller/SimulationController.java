@@ -28,7 +28,8 @@ public class SimulationController {
         List<Double> power=new ArrayList();
 
         for (int i=0;i<10;i+=0.1){
-            double x=waveHeight*Math.sin(omega*time);
+            double x=waveHeight*Math.sin(omega*time);//waveheight is the measurement of amplitude but we can consider within x direction and y direction
+            double y=waveHeight*Math.cos(omega*time);
             double f=springConstanat*waveHeight;
             double p=f*waveHeight*frequency;//make the velocity throw displacement and frequency
         }
