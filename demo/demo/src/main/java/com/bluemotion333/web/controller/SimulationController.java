@@ -31,13 +31,14 @@ public class SimulationController {
             double x=waveHeight*Math.sin(omega*time);//waveheight is the measurement of amplitude but we can consider within x direction and y direction
             double y=waveHeight*Math.cos(omega*time);
             double f=springConstanat*waveHeight;
-            double p=f*waveHeight*frequency;//make the velocity throw displacement and frequency
+            double p=f*waveHeight*omega*Math.cos(omega*time);//make the velocity throw displacement and frequency by that particular dirctiom
+            time.add(t);
+            displacement.add(x);
+            force.add(f);
+            power.add(p);            
         }
 
-        double displacement=waveHeight;
-        double force=k*displacement;
-        double velocity=frequency*displacement;
-        double power=force*velocity;
+        
 
         Map<String ,Double> result =new HashMap<>();
         result.put("force",force);
