@@ -19,13 +19,19 @@ public class SimulationController {
     public Map<String,Double> simulate(@RequestBody Map<String,Double> input) {
         double waveHeight=input.get("waveHeight");
         double frequency=input.get("frequency");
-        double k=input.get("springConstant");
+        double springConstanat=input.get("springConstant");
         double omega=2*Math.PI*frequency;
 
         List<Double> time=new ArrayList();
         List<Double> displacement=new ArrayList();
         List<Double> force=new ArrayList();
         List<Double> power=new ArrayList();
+
+        for (int i=0;i<10;i+=0.1){
+            double x=waveHeight*Math.sin(omega*time);
+            double f=springConstanat*waveHeight;
+            double p=f*waveHeight*frequency;//make the velocity throw displacement and frequency
+        }
 
         double displacement=waveHeight;
         double force=k*displacement;
