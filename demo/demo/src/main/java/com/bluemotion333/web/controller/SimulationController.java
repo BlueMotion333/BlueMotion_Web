@@ -2,6 +2,7 @@ package com.bluemotion333.web.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,11 @@ public class SimulationController {
         double frequency=input.get("frequency");
         double k=input.get("springConstant");
         double omega=2*Math.PI*frequency;
+
+        List<Double> time=new ArrayList();
+        List<Double> displacement=new ArrayList();
+        List<Double> force=new ArrayList();
+        List<Double> power=new ArrayList();
 
         double displacement=waveHeight;
         double force=k*displacement;
