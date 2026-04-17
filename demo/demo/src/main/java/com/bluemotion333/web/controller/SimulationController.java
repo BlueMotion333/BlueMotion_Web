@@ -19,6 +19,7 @@ public class SimulationController {
         double waveHeight=input.get("waveHeight");
         double frequency=input.get("frequency");
         double k=input.get("springConstant");
+        double omega=2*Math.PI*frequency;
 
         double displacement=waveHeight;
         double force=k*displacement;
