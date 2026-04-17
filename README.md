@@ -177,7 +177,12 @@ http://localhost:3000
 ## 👥 Team
 
 * University of Moratuwa Engineering Students
-* Project for Entrepreneurship / Energy Systems
+* Team BlueMotoin
+* Daneesha Dulmith
+* Dineth Ranaweera
+* Dulshi Ranaweera
+* Lasith Eeshan
+* Thiseni Sineka
 
 ---
 
