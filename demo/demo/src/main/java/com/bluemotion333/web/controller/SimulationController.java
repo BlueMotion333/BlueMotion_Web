@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 import java.util.ArrayList;
-import static java.lang.Math.sin;
+
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,14 +24,14 @@ public class SimulationController {
         double springConstanat=input.get("springConstant");
         double omega=2*Math.PI*frequency;
 
-        List<Double> time=new ArrayList();
-        List<Double> displacement=new ArrayList();
-        List<Double> force=new ArrayList();
-        List<Double> power=new ArrayList();
+        List<Double> time=new ArrayList<>();
+        List<Double> displacement=new ArrayList<>();
+        List<Double> force=new ArrayList<>();
+        List<Double> power=new ArrayList<>();
 
         for (double i=0;i<10;i+=0.1){
             double x=waveHeight * Math.sin(omega*i);//waveheight is the measurement of amplitude but we can consider within x direction and y direction
-            double y=waveHeight * Math.cos(omega*i);
+       
             double f=springConstanat*waveHeight;
             double p=f*waveHeight*omega*Math.cos(omega*i);//make the velocity throw displacement and frequency by that particular dirctiom
             time.add(i);
